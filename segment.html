@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Segmentation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Image Segmentation</h1>
+    <form action="/segment" method="post" enctype="multipart/form-data">
+      <label for="image">Upload an image:</label>
+      <input type="file" id="image" name="image" accept="image/*" required />
+      <br />
+      <canvas id="canvas" width="400" height="400"></canvas>
+      <br />
+      <button type="button" onclick="getSegmentation()">Segment</button>
+      <input type="hidden" id="userId" name="userId" value="12345" />
+      <input type="hidden" id="segmentation" name="segmentation" />
+      <br />
+      <input type="submit" value="Save Segmentation" />
+    </form>
+    <script src="index.js"></script>
+  </body>
+</html>
